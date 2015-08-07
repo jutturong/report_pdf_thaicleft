@@ -2,8 +2,11 @@
 
 require_once("pdf_class.php"); //class PDF
 #require_once("query_abs.php");
+  require 'query_register.php';
 
 //http://127.0.0.1/report_pdf/report_abstract.php?id_abstract=27
+  
+
 
 
 
@@ -95,15 +98,15 @@ $pdf->MultiCell( 0  , 0 , iconv( 'UTF-8','cp874' ,' '.'RECEIPT' ));
 
 $pdf->setXY( 10, $y_absolute +  ($r*8)  );
 $pdf->SetFont('angsana','',15);
-$pdf->MultiCell( 0  , 0 , iconv( 'UTF-8','cp874' ,'____________________________________________________________________________ '.'has paid for the Registration Fee' )); 
+$pdf->MultiCell( 0  , 0 , iconv( 'UTF-8','cp874' ,'________ '.$arr_va[3].'      '.$arr_va[2].'_____________________________ '.'has paid for the Registration Fee' )); 
 
 $pdf->setXY( 10, $y_absolute +  ($r*9)  );
 $pdf->SetFont('angsana','',15);
-$pdf->MultiCell( 0  , 0 , iconv( 'UTF-8','cp874' ,'Pre - congress 17 th November 2015, amount of'.'_____________________________________Baht/USD' )); 
+$pdf->MultiCell( 0  , 0 , iconv( 'UTF-8','cp874' ,'Pre - congress 17 th November 2015, amount of'.'__________________________Baht/USD' )); 
 
 $pdf->setXY( 10, $y_absolute +  ($r*10)  );
 $pdf->SetFont('angsana','',15);
-$pdf->MultiCell( 0  , 0 , iconv( 'UTF-8','cp874' ,'Congress 18 th - 20 th November 2015, amount of'.'_____________________________________Baht/USD' )); 
+$pdf->MultiCell( 0  , 0 , iconv( 'UTF-8','cp874' ,'Congress 18 th - 20 th November 2015, amount of'.'_________________________Baht/USD' )); 
 
 $pdf->setXY( 10, $y_absolute +  ($r*11)  );
 $pdf->SetFont('angsana','',15);
